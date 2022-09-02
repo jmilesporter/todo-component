@@ -5,8 +5,8 @@ export const todos = writable([]);
 export const name = writable('Svelte');
 
 export const addTodo = (text) => {
-	todos.update((cur) => {
-		const newTodos = [...cur, { text, completed: false, id: Date.now() }];
+	todos.update((current) => {
+		const newTodos = [...current, { text, completed: false, id: Date.now() }];
 		return newTodos;
 	});
 };
